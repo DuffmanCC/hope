@@ -1,0 +1,1 @@
+jquery.swipebox-settings.js

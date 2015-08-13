@@ -1,0 +1,857 @@
+/*
+Theme Name: Hope
+Theme URI: 
+Author: Carlos Ortiz
+Author URI: carlosortiz.co.uk
+Description: Hi, I'm Hope, a theme for charity based on _underscore.
+Version: 0.9.5
+License: GNU General Public License v3.0 /
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready, bootstrap.
+
+*/
+
+@import "variables";
+@import "mixins";
+@import "normalize";
+
+/* *******************************************
+******************* GENERAL ******************
+******************************************* */
+body,html{ height:100%; margin:0;}
+body{
+	position:relative;
+	min-height: 100%;
+}
+p, ul, ol{
+	font-family: $primary-font;
+	font-size: 20px;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: $secondary-font;
+}
+#main-content{
+	background-color: $seconday-color;
+}
+
+/* *******************************************
+******************* HEADER  ******************
+******************************************* */
+
+//FRONTPAGE
+#masthead-frontpage{
+	z-index: 99;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: $white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	a {
+	color: $white;
+	}
+	.site-header-inner{
+	    margin: 0 auto;	    
+		.site-branding{			
+			text-align: left;
+			margin:0 auto;
+			@media (max-width: 600px){
+				max-width: 100%;
+		        margin: 0;
+		        padding: 5px;
+		        border: none;	
+			}
+		}
+	}
+	.site-navigation{
+	z-index: 99;
+		.navbar-default{
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			.navbar-header{
+				background-color: transparent;
+				margin-top: 35px;
+				.navbar-toggle{
+					width: 70px;
+					height: 50px;
+					margin: 0;
+					padding: 10px;
+					border-color: $white;
+					background-color: $primary-color;
+					&:hover{
+						background-color: $seconday-color;
+					}
+					.icon-bar{
+						width: 50px;
+						background-color: $white;
+					}
+				}
+			}
+			.navbar-collapse{
+				padding: 0;
+				#main-menu{
+					float: left;
+					margin: 0;
+					@media (max-width: 767px){
+						background-color: rgba(0, 0, 0, 0.5);
+						padding: 20px;
+					}					
+					.menu-item{
+						&:hover{
+							border-bottom: 3px solid $white;
+						}
+						a{
+						color: $white;
+						font-size: 24px;
+						padding: 15px 15px 5px 0;
+						}
+					} 
+				}
+			}
+		}		
+	}
+}
+//NO FRONTPAGE
+#masthead{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: $white;
+	a {
+	color: $white;
+	}
+	.site-header-inner{
+	    margin: 0 auto;	    
+		.site-branding{			
+			text-align: left;
+			margin:0 auto;
+			@media (max-width: 600px){
+				max-width: 100%;
+		        margin: 0;
+		        padding: 5px;
+		        border: none;	
+			}
+		}
+	}
+	.site-navigation{
+	z-index: 99;
+		.navbar-default{
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			.navbar-header{
+				background-color: transparent;
+				margin-top: 35px;
+				.navbar-toggle{
+					width: 70px;
+					height: 50px;
+					margin: 0;
+					padding: 10px;
+					border-color: $white;
+					background-color: $primary-color;
+					&:hover{
+						background-color: $seconday-color;
+					}
+					.icon-bar{
+						width: 50px;
+						background-color: $white;
+					}
+				}
+			}
+			.navbar-collapse{
+				padding: 0;
+				#main-menu{
+					float: left;
+					margin: 0;
+					@media (max-width: 767px){
+						background-color: rgba(0, 0, 0, 0.5);
+						padding: 20px;
+					}					
+					.menu-item{
+						&:hover{
+							border-bottom: 3px solid $white;
+						}
+						a{
+						color: $white;
+						font-size: 24px;
+						padding: 15px 15px 5px 0;
+						}
+					} 
+				}
+			}
+		}		
+	}
+}
+
+/* *******************************************
+******************* SLIDER *******************
+******************************************* */
+#slider-section{
+	position: relative;
+	z-index: 1;
+}
+/* *******************************************
+******************* ABOUT ********************
+******************************************* */
+
+#activity-section{
+	@include row;
+	.site-title{
+		margin-bottom: 50px;
+	}
+	.site-content{
+		padding: 0 30px;
+	}
+}
+
+/* *******************************************
+****************** SERVICES ******************
+******************************************* */
+
+#services-section{
+	background-color: $primary-color;
+	@include row;
+	.row .site-title h1{
+		color: $white;
+	}
+	.one-service{
+		background-color: $white;
+		padding: 30px 0;
+		margin: 10px 0 10px;
+		.service-icon {
+			text-align: center;
+			padding: 10px 0;
+			i{
+			  font-size: 100px;
+			  text-shadow: 2px 2px 2px grey;
+			  color: $primary-color;
+			  padding: 40px;
+			  border: 7px solid $primary-color;
+			  border-radius: 100%;
+			  width: 200px;
+			  &:hover{
+			  background-color: $oscuro;
+			}
+		}
+			}			
+		h4{
+			text-align: center;
+			padding: 10px 0;
+			font-size: 22px;
+			a{
+				color: $seconday-color;
+				text-transform: uppercase;
+			}
+		}
+		.excerpt{
+			padding: 0 10px;
+		}
+		@include boton;				
+	}
+}
+article.services{
+	background-color: $white;
+	header{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.page-title{
+			color: $seconday-color;
+			font-size: 50px;
+			padding: 15px 15px ;
+			margin: 0;
+			text-transform: uppercase;
+		}
+	}
+	.entry-content{
+		padding: 0 15px 25px;
+	}
+}
+
+/* *******************************************
+****************** GALLERY *******************
+******************************************* */
+
+
+#gallery-section{
+	@include row;
+	.gallery{
+		margin: 0;
+		padding: 0;
+		.gallery-item{
+			margin: 0;
+			padding: 0;
+			position: relative;
+			overflow: hidden;
+			.item-hover{
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				.bg-hover{
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					background-color: $oscuro;				
+					opacity: 0;
+					transition: opacity 1s;
+					text-align: center;
+					vertical-align: middle;
+					font-size: 30px;
+					&:hover{
+						opacity: 0.7;
+						color: $white;
+					}
+					span{
+						display: block;
+						position: absolute;
+						bottom: 5px;
+						right: 0;
+						left: 0;
+						text-align: center;
+						text-transform: uppercase;
+					}
+				}
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}	
+	}
+}
+
+/* *******************************************
+******************* TEAM *********************
+******************************************* */
+
+#team-section{
+	@include row;
+	.row{
+		.team{
+			margin-top: 50px;
+			.team-member{
+				.member-cover{
+					width: 300px;
+					margin: 0 auto;
+					border: 7px solid $primary-color;
+				  	border-radius: 100%;
+				  	overflow: hidden;
+					img{
+					width: 100%;
+					height: auto;
+					}
+				}
+				.member-name{
+					h3{
+						text-align: center;
+						text-transform: uppercase;
+					}
+					h4{
+						color: $seconday-color;
+						text-align: center;
+						text-transform: uppercase;
+						font-style: italic;
+					}
+					@include boton;
+					h5{
+						text-align: center;
+						color: $seconday-color;
+					}
+				}	
+			}
+		}		
+	}
+}
+article.team{
+	background-color: $white;
+	padding: 15px;
+	header{
+		margin-bottom: 50px;
+		h1{
+			color: $seconday-color;
+			text-transform: uppercase;
+		}
+		h3{
+			margin: 0;
+		}
+	}
+	.entry-content{
+		.member-cover{
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			border: 7px solid $primary-color;
+		  	border-radius: 100%;
+		  	overflow: hidden;
+			img{
+			width: 100%;
+			height: auto;
+			}
+		}
+		.content{
+			float: left;
+			margin-top: 50px;
+		}
+		.mail{
+			color: $seconday-color;
+		}
+	}
+}
+
+/* *******************************************
+****************** CAUSES ********************
+******************************************* */
+
+#causes-section{
+	background-color: $primary-color;
+	.site-title{
+		color: $white;
+	}
+	@include row;
+	.row .site-title h1{
+		color: $white;
+	}
+	.cause-entry{
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 20px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.cause-cover{
+			position: absolute;
+			top: 70%;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.3);
+			@media (max-width: 1600px) {
+				top: 60%;
+			}
+			@media (max-width: 1380px) {
+				top: 40%;
+			}
+			@media (max-width: 1150px) {
+				top: 35%;
+			}
+			@media (max-width: 991px) {
+				top: 60%;
+			}
+			@media (max-width: 800px) {
+				top: 50%;
+			}
+			@media (max-width: 620px) {
+				top: 30%;
+			}
+			@media (max-width: 510px) {
+				top: 0%;
+			}
+			.cause-cover-hover{
+				h4 a{
+					color: $seconday-color;
+					text-align: center;
+					display: block;
+					font-size: 20px;
+					text-transform: uppercase;
+				}
+				p{
+					color: $white;
+					font-size: 14px;
+					padding: 10px;
+				}
+				.donation-bar{
+					width: 95%;
+					margin: 0 auto;
+					.donation-porcentage{
+						width: 100%;
+						height: 5px;
+						background-color: $white;
+						span{
+							display: block;
+							height: 5px;
+							background-color: $seconday-color;
+						}
+					}
+				}
+			}
+		}
+	}	
+}
+article.causes{
+	background-color: $white;
+	padding-bottom: 50px;
+	header{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.page-title{
+			color: $seconday-color;
+			font-size: 50px;
+			padding: 0 15px;
+			text-transform: uppercase;
+		}
+		.donation-bar{
+			padding: 0 15px;
+			.donation-porcentage{
+				position: relative;
+				width: 100%;
+				height: 30px;
+				background-color: $white;
+				border: 1px solid black;
+				margin-bottom: 20px;
+				span{
+					display: block;
+					height: 28px;
+					background-color: $seconday-color;
+				}
+				p{
+					position: absolute;
+					text-align: center;
+					top: 0;
+					margin: 0;
+					color: $white;
+					padding-left: 50px;
+				}
+			}
+			p{
+				font-style: italic;
+			}
+		}
+	}
+	.entry-content{
+		padding: 0 15px 25px;
+	}
+	@include boton;
+}
+
+
+/* *******************************************
+****************** EVENTS ********************
+******************************************* */
+
+#events-section{
+	@include row;
+	.event-item{
+		background-color: $white;
+		margin-bottom: 30px;
+		border-bottom: 7px solid $seconday-color;
+		.item-img{
+			position: relative;
+			.item-cover{
+				position: absolute;
+				top: 70%;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				color: $white;
+				background-color: rgba(0, 0, 0, 0.3);
+				h3{
+					text-align: center;
+				}
+			}
+			img{
+			width: 100%;
+			height: auto;
+			}
+		}
+		.item-header{
+			padding: 10px;
+			h5{
+				font-style: italic;
+				font-family: $primary-font;
+				font-size: 20px;
+			}
+			h2{
+				font-family: $secondary-font;
+				text-transform: uppercase;
+			}
+		}
+		.item-content{
+			padding: 10px;
+			@include boton;
+		}
+		.item-footer{
+			padding: 10px;
+			h6{
+				font-style: italic;
+				font-family: $primary-font;
+				font-size: 18px;
+			}
+		}	
+	}
+}
+article.events{
+	padding-bottom: 50px;
+	background-color: $white;
+	header{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.page-title{
+			padding: 0 15px;
+			color: $seconday-color;
+			text-transform: uppercase;
+		}
+		h3{
+			padding: 0 15px;
+			font-family: $primary-font;
+			font-style: italic;
+		}
+	}
+	.entry-content{
+		padding: 15px 15px;
+	}
+	footer{
+		padding: 0 15px;
+		p{
+			margin: 0;
+			span{
+				color: $seconday-color;
+				font-family: $secondary-font;
+			}
+		}
+	}
+		
+}
+
+/* *******************************************
+****************** CONTACT *******************
+******************************************* */
+
+#contact-section{
+	background-color: $primary-color;
+	color: $white;
+	@include row;
+
+	.row .site-title h1{
+		color: $white;
+	}
+	.contact-info{
+		text-align: center;
+		font-size: 30px;
+		a{
+			color: $white;
+		}
+		i{
+			font-size: 40px;
+			margin-right: 10px;
+		}
+	}
+}
+
+/* *******************************************
+******************* BLOG *********************
+******************************************* */
+article.post{
+	border-radius: 3px;
+	margin: 10px;
+	padding: 20px;
+	width: 440px;
+	background-color: $white;
+	header{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		h2{
+			margin-top: 0;
+		}
+		.entry-meta{
+			margin-bottom: 10px;
+		}
+	}
+	footer.entry-meta{
+		p{
+			font-size: 16px;
+			margin-bottom: 2px;
+		}	
+		background-color: $oscuro;
+		padding: 10px 10px 5px 10px;
+		color: $white;
+		font-weight: 700;
+	}
+}
+article.single{
+	width: 100%;
+	border-radius: 0;
+	margin: 0;
+	padding: 20px 0 0 0;
+	header{
+		img{
+
+		}
+		h1{
+			padding: 0 15px;
+			color: $seconday-color;
+			text-transform: uppercase;
+		}
+		.entry-meta{
+			padding: 0 15px;
+		}	
+	}
+	.entry-content{
+		padding: 0 15px 20px 15px;
+		overflow: hidden;
+		.wp-caption{
+			.wp-caption-text{
+				font-style: italic;
+				font-size: 14px;
+			}
+		}
+	}
+}
+#nav-below.paging-navigation,
+#nav-below.post-navigation{
+	background-color: $white;
+	padding: 0 15px;
+	h1{
+		display: none;
+	}
+	li{		
+		a{
+			color: $white;
+			background-color: $oscuro;
+			border-radius: 5px;
+		}
+	}
+}
+table th{
+	padding-right: 30px;
+}
+blockquote{
+	border-left: 5px solid $seconday-color;
+}
+/* *************** COMMENTS *************** */
+
+#comments.comments-area{
+	background-color: $white;
+	padding: 30px 15px;
+	header{
+		.comments-title{
+			span{
+				color: $seconday-color;
+			}
+		}
+	}
+	.comment-navigation{
+		h5, h1{
+			display: none;
+		}
+		.pager{
+			li{
+				a{
+					color: $white;
+					background-color: $oscuro;
+					border-radius: 5px;
+					font-size: 16px;
+					padding: 5px 15px;
+					border: 1px solid black;
+					height: auto;
+				}
+			}
+		}
+		.nav-previous, .nav-next{
+			a{
+				color: $white;
+				background-color: $oscuro;
+				border-radius: 5px;
+				font-size: 16px;
+				padding: 5px 15px;
+				border: 1px solid black;
+				height: auto;
+			}
+		}
+	}
+	.comment-list{
+		li.comment{
+			.comment-body{
+				.media-body{
+					.panel-heading{
+						
+					}
+				}
+			}
+			.comment-respond{
+				.comment-form{
+					.logged-in-as, .form-allowed-tags, .alert{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* *******************************************
+***************** SIDEBAR ********************
+******************************************* */
+.sidebar{
+	color: $white;
+	height: 100%;
+	padding: 5px 20px 20px 20px;
+	a{
+		color: $white;
+	}
+	.widget{
+		width: 240px;
+		margin-right: 10px;
+		position: relative;
+		.widget-title{
+			padding-top: 5px;
+			color: $primary-color;
+			border-bottom: 2px solid $primary-color;
+		}
+		ul{
+			list-style-type: none;
+			padding-left: 20px;
+			font-size: 17px;
+		}
+	}
+}
+
+/* *******************************************
+****************** FOOTER ********************
+******************************************* */
+
+#colophon{
+	background-color: $oscuro;
+	padding: 20px;
+	color: $white;
+	font-size: 20px;
+	#footer-left{
+		text-align: left;
+		a{
+			color: $white;
+			font-size: 20px;
+			&:hover{
+				color: $primary-color;
+			}		
+		}
+		@media (max-width: 700px){
+			font-size: 15px;
+		}
+	}
+	.site-info{
+		padding: 0;
+	}
+	#footer-right.widget {
+		text-align: right;
+		i{
+			font-size: 60px;
+			margin-right: 30px;
+			@media (max-width: 992px){
+				font-size: 40px;
+			}
+			@media (max-width: 690px){
+				margin-right: 20px;
+			}
+		}
+	}
+}

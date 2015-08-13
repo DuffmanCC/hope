@@ -1,0 +1,37 @@
+// Colores base
+
+$lightgray      : #819090;
+$gray           : #708284;
+$mediumgray     : #536870;
+$darkgray       : #475B62;
+$darkblue       : #0A2933;
+$darkerblue     : #042029;
+$paleryellow    : #FCF4DC;
+$paleyellow     : #EAE3CB;
+$yellow         : #A57706;
+$orange         : #BD3613;
+$red            : #D11C24;
+$pink           : #C61C6F;
+$purple         : #595AB7;
+$blue           : #2176C7;
+$cyan           : #259286;
+$green          : #738A05;
+$white			: #FFF;
+$black			: #000;
+$transparent	: rgba(0, 0, 0, 0.6);
+
+$primary-color: $darkblue;
+$seconday-color: $red;
+$white: $white;
+$oscuro: $black;
+
+@import url(http://fonts.googleapis.com/css?family=Muli:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Changa+One:400,400italic,200italic);
+
+$primary-font: 'Muli', sans-serif;
+$secondary-font: 'Changa One';
+
+
+
+
+

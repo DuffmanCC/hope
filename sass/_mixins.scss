@@ -1,0 +1,41 @@
+//mixins
+
+@mixin row{
+	.row{
+		padding: 10px 0 30px;
+		.site-title {
+			background-color: transparent;
+			h1{
+			margin: 0;
+			font-size: 70px;
+			text-transform: uppercase;
+			color: $seconday-color;
+			text-align: center;
+			padding: 20px 0;	
+			text-shadow: 5px 5px 5px grey;
+			}
+		}
+		.site-content{
+			font-family: $primary-font;
+			font-size: 20px;
+		}
+	}
+}
+
+@mixin boton{
+	.boton {
+		padding: 10px 0;
+		text-align: center;
+		.btn{
+		background-color: $primary-color;
+		color: $white;
+		padding: 10px 30px;
+		font-size: 16px;
+		border: 7px solid $primary-color;
+		text-transform: uppercase;
+			&:hover{
+			  background-color: $oscuro;
+			}
+		}
+	}
+}
